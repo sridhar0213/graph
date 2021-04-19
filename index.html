@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5f59ca6ad3.js" crossorigin="anonymous"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.1.0/chart.js" integrity="sha512-LlFvdZpYhQdASf4aZfSpmyHD6+waYVfJRwfJrBgki7/Uh+TXMLFYcKMRim65+o3lFsfk20vrK9sJDute7BUAUw==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="takvaviya.css">
+</head>
+
+<body>
+    <div class="bg-container p-5">
+        <h1 style="font-size:24px">Graph Representation</h1>
+        <div class="graph mt-5 mb-5">
+
+            <div class="list p-3 mr-3" id="list">
+                <h1>Summary</h1>
+
+            </div>
+            <div class="graph-container p-5">
+                <h1>Analytical Maps</h1>
+                <div class="d-flex flex-row justify-content-center">
+                    <button id="powerButton">Power Loss Metrices</button>
+                    <button id="anamolyButton" class="button-background">Anamoly Classification</button>
+                    <button id="inverterButton">Inverter-wise Analysis</button>
+                    <button id="healthButton">Health History</button>
+                </div>
+                <div class="graph" id="anamolyStatus">
+                    <canvas class="canvas mb-5 p-3" id="anamolyStraight"></canvas>
+                    <canvas class="canvas mb-5 p-3" id="anamolyHorizontal"></canvas>
+                    <canvas class="canvas mb-5 p-3" id="anamolyPie"></canvas>
+                </div>
+                <div class="graph d-none" id="powerStatus">
+                    <canvas class="canvas mb-5 p-3" id="powerStraight"></canvas>
+                    <canvas class="canvas mb-5 p-3" id="powerHorizontal"></canvas>
+                    <canvas class="canvas mb-5 p-3" id="powerPie"></canvas>
+                </div>
+                <div class="graph d-none" id="interStatus">
+                    <canvas class="canvas mb-5 p-3" id="interStraight"></canvas>
+                    <canvas class="canvas mb-5 p-3" id="interHorizontal"></canvas>
+                    <canvas class="canvas mb-5 p-3" id="interPie"></canvas>
+                </div>
+                <div class="graph d-none" id="healthStatus">
+                    <canvas class="canvas mb-5 p-3" id="healthStraight"></canvas>
+                    <canvas class="canvas mb-5 p-3" id="healthHorizontal"></canvas>
+                    <canvas class="canvas mb-5 p-3" id="healthPie"></canvas>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+    <script src="takvaviya.js">
+    </script>
+</body>
+
+</html>
